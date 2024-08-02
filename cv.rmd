@@ -1,0 +1,200 @@
+---
+title: "Anthony Rebours's CV"
+author: Anthony Rebours
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: true
+output:
+  pagedown::html_resume:
+    css: ['dd_cv.css', 'resume']
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+source("cv_printing_functions.r")
+
+# Read in all data and initialize a CV printer object
+CV <- create_CV_object(
+  data_location = "C:/Users/rebou/OneDrive/Bureau/Stats/R/Projets/cv/spreadsheets/",  
+  pdf_mode = params$pdf_mode
+)
+
+```
+
+
+```{r}
+# When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
+if(params$pdf_mode) {
+    cat("
+<style>
+:root{
+  --decorator-outer-offset-left: -6.5px;
+}
+</style>")
+}
+```
+
+
+Aside
+================================================================================
+
+```{r}
+# Build interactive network of positions colored by section
+# and connected if they occurred in the same year
+# datadrivencv::build_network_logo(CV$entries_data)
+```
+
+
+```{r}
+if(params$pdf_mode){
+  cat("View this CV online with links at _C:/Users/rebou/OneDrive/Bureau/Stats/R/Projets/cv/_")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](C:/Users/rebou/OneDrive/Bureau/Stats/R/Projets/cv/rebours_cv.pdf)")
+}
+```
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+```{r}
+CV |> print_contact_info()
+```
+
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+**Language** \
+- French (Native)\
+- English (Fluent)
+
+**Software** \
+- Gephi \
+- RMarkdown \
+- Jupyter(Python)
+
+**R Programming** \
+- Network Analysis \
+- Bibliometrics \
+- Statistics \
+- Data visualization \
+- web-scraping
+
+**SQL Programming** \
+- Database querying and data formating
+
+```{r}
+# CV |> print_skill_bars()
+```
+
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+
+The source code is available [on github.com/nstrayer/cv](https://github.com/nstrayer/datadrivencv).
+
+
+
+
+Main
+================================================================================
+
+Anthony Rebours {#title}
+--------------------------------------------------------------------------------
+
+```{r}
+# Note the assignment back to CV. This is so the link stripping works properly in PDF mode
+CV <- print_text_block(CV, "intro") 
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'education')
+```
+
+
+
+Teachning and Research Experience {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'teaching_and_research_experiences')
+```
+
+
+
+Research Articles {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'research_articles')
+```
+
+<!-- These breaks just force a new page so section doesnt get cut off -->
+<br>
+<br>
+<br>
+
+Working Papers {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'working_papers')
+```
+
+
+
+Blog Posts {data-icon=newspaper}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'blog_posts')
+```
+
+
+
+Talks  {data-icon=person-chalkboard}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'talks')
+```
+
+
+<br>
+<br>
+
+
+Elected Positions  {data-icon=handshake}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'elected_positions')
+```
+
+
+
+Grants {data-icon=landmark}
+--------------------------------------------------------------------------------
+
+```{r}
+CV <- print_section(CV, 'grants')
+```
+
+
+
+
