@@ -52,11 +52,11 @@ Aside
 
 
 ```{r}
-if(params$pdf_mode){
-  cat("View this CV online with links at _C:/Users/rebou/OneDrive/Bureau/Stats/R/Projets/cv/_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](C:/Users/rebou/OneDrive/Bureau/Stats/R/Projets/cv/rebours_cv.pdf)")
-}
+#if(params$pdf_mode){
+#  cat("View this CV online with links at _C:/Users/rebou/OneDrive/Bureau/Stats/R/Projets/cv/_")
+#} else {
+#  cat("[<i class='fas fa-download'></i> Download a PDF of this #CV](C:/Users/rebou/OneDrive/Bureau/Stats/R/Projets/cv/rebours_cv.pdf)")
+#}
 ```
 
 Contact {#contact}
@@ -78,17 +78,18 @@ Language Skills {#skills}
 **Software** \
 - Gephi \
 - RMarkdown \
-- Jupyter(Python)
+- Jupyter (Python)
 
 **R Programming** \
 - Network Analysis \
 - Bibliometrics \
 - Statistics \
 - Data visualization \
-- web-scraping
+- Web-scraping
 
 **SQL Programming** \
-- Database querying and data formating
+- Database querying \
+- Data formatting
 
 ```{r}
 # CV |> print_skill_bars()
