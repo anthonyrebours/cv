@@ -1,0 +1,167 @@
+---
+name: Anthony
+surname: Rebours
+position: "Bibliomètre - Sorbonne Université"
+phone: 06 83 40 17 56
+www: anthonyrebours.netlify.app
+email: "reboursanthony@hotmail.fr"
+github: anthonyrebours
+linkedin: anthony-rebours-0636a134b
+date: "`r format(Sys.time(), '%B %Y')`"
+output: vitae::hyndman
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(dplyr)
+library(tibble)
+
+```
+
+# Compétences
+
+- **Programmation en R (avancé)** : Analyse et visualisation de données, bibliométrie, webscraping, text-mining et machine learning, interrogation de bases de données, création de site web et applications statiques 
+
+- **Autres langages de programmation (basique)** : Python, CSS, HTML, SPARQL, SQL
+
+- **Logiciels** : Markdown, Quarto, Gephi, VOSViewer (certification CWTS), Zotero
+
+- **Langue** : Anglais (courant)
+
+# Education
+
+```{r}
+
+tribble(
+  ~degree, ~year, ~place, ~institution,
+  "Thèse de doctorat en économie (abandonnée)", "Sep. 2016 - Sep. 2024", "Paris, France", "Université Paris 8",
+  "Master 2 Histoire de la pensée économique", "2016", "Paris, France", "Université Paris 8",
+  "Master 1 ", "2015", "Paris, France", "Université Paris 8"
+) %>% 
+  detailed_entries(
+    what = degree, 
+    when = year, 
+    with = place, 
+    where = institution
+  )
+```
+
+
+# Expérience professionelle 
+
+```{r}
+tribble(
+  ~position, ~year, ~place, ~institution,
+  "Chargé de bibliométrie", "Fev. 2025 - ", "Paris, France", "Bibliothèque de Sorbonne Université", 
+  "ATER Economie-Gestion", "Sep. 2020 - Sep. 2022", "Paris, France", "Université Paris 8",
+  "Chercheur invité", "Sep. 2019 - Avr. 2020", "Durham (NC), USA", "Duke University, Center for the History of Political Economy (HOPE)",
+  "Assistant de recherche (Projet TOFLIT 18)", "Aout 2019", "Paris, France", "Institut National d'Etudes Démographiques (INED)",
+  "Chercheur invité", "Jan. 2019 - Juil. 2019", "Montréal (QC), Canada", "UQAM, Centre Interuniversitaire de Recherche sur la Science et la Technologie (CIRST)",
+  "Enseignant contractuel AES/Economie-Gestion", "Sep. 2018 - Dec. 2018", "Paris, France", "Université Paris 8",
+  "Assistant de recherche (Projet TOFLIT 18)", "Fev. 2018", "Paris, France", "Institut National d'Etudes Démographiques (INED)",
+  "Chercheur invité", "Oct. 2017 - Jan. 2018", "Montréal (QC), Canada", "UQAM, Centre Interuniversitaire de Recherche sur la Science et la Technologie (CIRST)",
+  "Assistant de recherche (Projet TOFLIT 18)", "Juil. 2017 - Aout. 2017", "Paris, France",  "Institut National d'Etudes Démographiques (INED)",
+  "Enseignant contractuel L3 Economie-Gestion", "Jan. 2017 - Juin. 2017", "Tours, France", "Université de Tours François Rabelais",
+  "Assistant de recherche (Projet TOFLIT 18)", "Juil. 2016", "Paris, France", "Institut National d'Etudes Démographiques (INED)",
+  "Assistant de recherche (Projet TOFLIT 18)", "Juil. 2015", "Paris, France", "Institut National d'Etudes Démographiques (INED)"
+) %>% 
+  detailed_entries(
+    what = position, 
+    when = year, 
+    with = place, 
+    where = institution
+  )
+```
+
+
+# Articles de recherche
+
+- 2025 -- "History of IAFFE Presidents’ Trajectories and Cognitive Interactions" (with [Rebeca Gomez Betancourt](https://triangle.ens-lyon.fr/spip.php?article1356) and [Camila Orozco Espinel](https://univ-reims.academia.edu/CamilaOrozcoEspinel))\
+en cours d'évaluation *European Journal of History of Economic Thought*
+- 2025 -- "Land, Space or Cities: A History of 'Urban Economics' as a Field" (with [Beatrice Cherrier](https://beatricecherrier.wordpress.com/about/))\
+accepté *Journal of History of Economic Thought*
+
+
+# Publications numériques 
+
+- 2020 -- “Cities, Land and Space: A History of ‘Urban Economics’ As a Field” (with [Beatrice
+Cherrier](https://beatricecherrier.wordpress.com/about/))\
+Cambridge Centre for the Humanities and Social Change “Economists in the City: A Blogged Conference\
+https://hscif.org/economists-in-the-city-cherrierrebours/ \
+- 2020 -- "The institutionalization of Regional Science in the Shadow of Economics”\
+Cambridge Centre for the Humanities and Social Change “Economistsin the City: A Blogged Conference\
+https://hscif.org/economists-in-the-city-rebours/
+
+
+# Séminaires, conférences, workshops 
+
+- Juin 2023 -- "Do Feminists Economists Form a Community ofScholars?" (with Rebeca Gomez Betancourt and Camila Orozco Espinel) \
+HEC Lièges -- 26th Annual Conference of the European Society for the History of Economic Thought
+- Dec. 2022 -- "The Diffusion of Monocentric City Models of Land Use:How AMM became mainstream"\
+INED -- Workshop of the Society for the History of Recent Social Science(HISRESS) "Transforming Homo Economicus"
+- Juin 2022 -- "Do Feminists Economists Form a Community of Scholars?" (with Rebeca Gomez Betancourt and Camila Orozco Espinel)\
+ Graduate Institute of International and Development Studies (Genève, Suisse) -- Annual Conference of International Association For Feminist Economics
+- Juin 2022 -- “In Research of a Disciplinary Identity: The Institutionalization of Regional Science”\
+ Maison des sciences économiques -- Conference of the Réseau en Epistémologie et en Histoire de la Pensée Economique Récente (REHPERE) : “Recent Shifs in the Boundaries of Economics: Philosophy and History”
+- Dec. 2021 -- “In Research of a Disciplinary Identity: The Institutionalization of Regional Science”\
+INED -- Workshop of the Society for the History of Recent Social Science (HISRESS) “Economics and Other Social Sciences”
+- Mai 2021 -- “Land, Space or Cities: A History of ‘Urban Economics’ as a Field” (with Beatrice Cherrier)\
+Zoom Seminar -- Max Planck Science Po Center
+- Mars 2021 -- “Land, Space or Cities: A History of ‘Urban Economics’ as a Field” (with Beatrice Cherrier)\
+Zoom Seminar -- Département d’économie New York University à Abu Dhabi
+- Jan. 2020 -- “City and Space: The History of Urban Economics”\
+Duke University -- Workshop of the Center of History of Political Economy
+- Juin 2019 -- “Les interactions entre la géographie et l’économie (1980-2015) : une histoire bibliométrique”\
+Université TELUQ, Montréal -- Journées d’études of the Charles Gides Association “Les Evolutions des frontières disciplinaires de l’économie avec les autres sciences”
+- Juin 2019 -- “Les interactions entre la géographie et l’économie (1980-2015) : une histoire bibliométrique”\
+UQAM, Montréal -- Workshop Centre Interuniversitaire de Recherche sur la Science et la Technologie (CIRST)
+- Mai 2019 -- “The Evolution of the Relationships Between Economy and Geography (1980-2015): A Bibliometric Study”\
+Science Po Lille -- Young Scholar presentation for the 23rd Annual Conference of European Society for the History of Economic Thought (ESHET)
+- Mai 2019 -- “The Evolution of the Relationships Between Economy and Geography (1980-2015): A Bibliometric Study”\
+Université Paris 8 -- Workshop for Young Scholars “The Uses of Scientometrics for the History of Social Sciences” (co-organisé avec Alexandre Truc et Loïc Charles)
+- Dec. 2018 -- “The Evolution of the Relationships Between Economy and Geography (1980-2015): A Bibliometric Study”\
+Université Paris 8 -- Séminaire du LED
+- Juin 2018 -- “The Evolution of the Relationships Between Economy and Geography (1980-2015): A Bibliometric Study”\
+Loyola University of Chicago -- Young Scholar presentation for the 45th Annual Conference of History of Economic Society (HES)
+
+\bigskip
+
+# Fonctions électives
+
+```{r}
+tribble(
+  ~activity, ~year, ~place, ~institution,
+  "Représentant des doctorants", "Avr. 2019 - Sep. 2022", "Paris, France", "Laboratoire d'Economie Dionysien (LED)",
+  "Représentant des doctorants", "Dec. 2018 - Dec. 2022", "Paris, France", "Ecole doctorale de sciences sociales (ED 401)"
+) %>% 
+  detailed_entries(
+    what = activity,
+    when = year,
+    with = place,
+    where = institution
+  )
+```
+
+
+# Bourses et récompenses
+
+```{r}
+ tribble(
+   ~award, ~year,
+   "Final Year Fellowship du Center for the History of Political Economy, Duke University", "2019-2020", 
+   "Bourse de la Chancellerie des universités de Paris", "2017",
+   "Aide à la Mobilité des doctorants (AMI doctorants) de la région Île-de-France", "2017",
+   "Bourse de mobilité internationale de l'Office franco-québécois pour la jeunesse (OFQJ)", "2017"
+ ) %>% 
+  brief_entries(
+    what = award, 
+    when = year
+  )
+```
+
+ 
+
+
+
+
